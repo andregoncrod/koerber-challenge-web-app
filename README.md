@@ -9,12 +9,12 @@
 ### Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/)
-You don't need it if you only wants to run the project.
+You don't need it if you just want to run the project.
 
 ## Project Setup
 
 Run all this commands on project base directory.
-If you only want to run the project and don't have dev options you can user the powershell or bash to run prodution commands
+If you only want to run the project and don't have dev options you can use the powershell or bash to run prodution commands
 
 ```sh
 npm install
@@ -71,4 +71,4 @@ disabled on this system. For more information, see about_Execution_Policies.
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 ```
 
-
+Finally access on browser to http://localhost:3000
