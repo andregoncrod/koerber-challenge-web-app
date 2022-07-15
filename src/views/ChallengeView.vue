@@ -32,7 +32,7 @@ export default {
                         userId: this.actualUserID
                     })
                     .then((response) => {
-                        this.posts.push(response.data);
+                        this.posts.unshift(response.data);
                     })
                     .catch((err) => {
                         console.log(err);

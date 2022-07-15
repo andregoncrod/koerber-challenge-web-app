@@ -106,4 +106,10 @@ export default {
 .router-link-active.router-link-exact-active {
     font-weight: bold;
 }
+.nav-link,
+.nav-link:hover,
+.nav-link:active,
+.nav-link:visited {
+    color: black;
+}
 </style>
