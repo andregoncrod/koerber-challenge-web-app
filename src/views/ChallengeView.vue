@@ -165,7 +165,12 @@ export default {
                     </form>
                 </div>
                 <div class="col-md-6" style="float: left">
-                    <h6>User Posts - ID: {{ actualUserID }}</h6>
+                    <h6>
+                        User Posts
+                        <span v-if="actualUserID != -1"
+                            > - ID: {{ actualUserID }}</span
+                        >
+                    </h6>
                     <button
                         id="submitPost"
                         type="button"
