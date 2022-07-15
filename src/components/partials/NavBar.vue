@@ -33,7 +33,7 @@ export default {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <router-link to="/" class="nav-link active">
+                        <router-link to="/" class="nav-link">
                             Home
                         </router-link>
                     </li>
@@ -96,10 +96,14 @@ export default {
 #logged-msg {
     float: left;
     margin-bottom: 0;
+    line-height: 38px;
 }
 
 #loading-info {
     float: left;
     margin-bottom: 0;
+}
+.router-link-active.router-link-exact-active {
+    font-weight: bold;
 }
 </style>
