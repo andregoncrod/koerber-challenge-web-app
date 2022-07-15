@@ -12,6 +12,8 @@
 
 ## Project Setup
 
+Run all this commands on project base directory
+
 ```sh
 npm install
 ```
@@ -30,31 +32,41 @@ To do this, first copy `auth_configs_example.json` into a new file in the same f
 }
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Development options
+
+#### Lint with [ESLint](https://eslint.org/)
 
 ```sh
 npm run lint
 ```
 
-### Compile and Hot-Reload for Development
+#### Compile and Hot-Reload for Development
 
 ```sh
 npm run dev
 ```
 
+### Production
 
-
-### Compile and Minify for Production
+#### Compile and Minify for Production
 
 ```sh
 npm run build
 ```
 
-### Run Production Directory
+#### Run Production Directory
 
 ```sh
 npm install -g serve
 serve -s dist -l 3000 
+```
+
+If appears that error on last step execute the command below on powershell:
+serve : File C:\...\serve.ps1 cannot be loaded because running scripts is
+disabled on this system. For more information, see about_Execution_Policies
+
+```sh
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 ```
 
 
