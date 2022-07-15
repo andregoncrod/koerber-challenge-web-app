@@ -4,7 +4,7 @@
 
 ### Install Node.js on your computer
 
-[Node.js](https://nodejs.org/dist/v16.16.0/node-v16.16.0-x64.msi)
+[Node.js](https://nodejs.org/en/download/)
 
 ### Recommended IDE Setup
 
