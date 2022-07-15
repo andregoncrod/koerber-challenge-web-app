@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
                 <img id="logo" alt="Koerber logo" src="../../assets/logo.svg" />
@@ -105,11 +105,5 @@ export default {
 }
 .router-link-active.router-link-exact-active {
     font-weight: bold;
-}
-.nav-link,
-.nav-link:hover,
-.nav-link:active,
-.nav-link:visited {
-    color: black;
 }
 </style>
