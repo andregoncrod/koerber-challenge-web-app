@@ -1,8 +1,14 @@
 # koerber-challenge-web-app
 
-## Recommended IDE Setup
+## Pre-Requirements
 
-[VSCode](https://code.visualstudio.com/).
+## Install Node.js on your computer
+
+[Node.js](https://nodejs.org/dist/v16.16.0/node-v16.16.0-x64.msi)
+
+### Recommended IDE Setup
+
+[VSCode](https://code.visualstudio.com/)
 
 ## Project Setup
 
@@ -19,10 +25,15 @@ To do this, first copy `auth_configs_example.json` into a new file in the same f
 ```json
 {
   "domainAuth0": "<YOUR AUTH0 DOMAIN>",
-  "domainURLAuth0": "https://<YOUR AUTH0 DOMAIN>",
   "clientId": "<YOUR AUTH0 CLIENT ID>",
   "domainURL": "<YOUR LOCAL DOMAIN>"
 }
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
 ```
 
 ### Compile and Hot-Reload for Development
@@ -31,14 +42,21 @@ To do this, first copy `auth_configs_example.json` into a new file in the same f
 npm run dev
 ```
 
+
+
 ### Compile and Minify for Production
 
 ```sh
 npm run build
+npm install -g serve
+
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Run Production Directory
 
 ```sh
-npm run lint
+npm install -g serve
+serve -s dist -l 3000 
 ```
+
+

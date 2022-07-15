@@ -3,7 +3,6 @@ import auth0 from 'auth0-js';
 import router from '../router';
 import {
     domainAuth0,
-    domainURLAuth0,
     clientId,
     domainURL
 } from '../../auth_configs.json';
@@ -81,7 +80,7 @@ export default new Vuex.Store({
             localStorage.removeItem('nickName');
 
             // redirect to auth0 logout to completely log the user out
-            window.location.href = `${domainURLAuth0}/v2/logout?client_id=${clientId}&returnTo=${domainURL}/logout`;
+            window.location.href = `https://${domainAuth0}/v2/logout?client_id=${clientId}&returnTo=${domainURL}/logout`;
         }
     }
 });
