@@ -48,8 +48,6 @@ npm run dev
 
 ```sh
 npm run build
-npm install -g serve
-
 ```
 
 ### Run Production Directory
