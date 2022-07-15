@@ -62,6 +62,11 @@ router.beforeEach((to, from, next) => {
         localStorage.getItem('userName') ? localStorage.getItem('userName') : ''
     );
 
+    AuthStore.commit(
+        'setNickName',
+        localStorage.getItem('nickName') ? localStorage.getItem('nickName') : ''
+    );
+
     AuthStore.commit('setUserIsAuthenticated', routerAuthCheck);
 
     // check if the route to be accessed requires authorizaton

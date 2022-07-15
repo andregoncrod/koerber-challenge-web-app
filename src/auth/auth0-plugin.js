@@ -12,6 +12,7 @@ export default new Vuex.Store({
     state: {
         userIsAuthorized: false,
         userName: '',
+        nickName: '',
         auth0: new auth0.WebAuth({
             domain: domainAuth0,
             clientID: clientId,
@@ -26,6 +27,9 @@ export default new Vuex.Store({
         },
         setUserName(state, replacement) {
             state.userName = replacement;
+        },
+        setNickName(state, replacement) {
+            state.nickName = replacement;
         }
     },
     actions: {
@@ -54,6 +58,10 @@ export default new Vuex.Store({
                         'userName',
                         authResult.idTokenPayload.name
                     );
+                    localStorage.setItem(
+                        'nickName',
+                        authResult.idTokenPayload.nickname
+                    );
 
                     router.replace('/challenge');
                 } else if (err) {
@@ -70,6 +78,7 @@ export default new Vuex.Store({
             localStorage.removeItem('id_token');
             localStorage.removeItem('expires_at');
             localStorage.removeItem('userName');
+            localStorage.removeItem('nickName');
 
             // redirect to auth0 logout to completely log the user out
             window.location.href = `${domainURLAuth0}/v2/logout?client_id=${clientId}&returnTo=${domainURL}/logout`;
