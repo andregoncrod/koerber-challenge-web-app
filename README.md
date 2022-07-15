@@ -2,7 +2,7 @@
 
 ## Pre-Requirements
 
-## Install Node.js on your computer
+### Install Node.js on your computer
 
 [Node.js](https://nodejs.org/dist/v16.16.0/node-v16.16.0-x64.msi)
 
