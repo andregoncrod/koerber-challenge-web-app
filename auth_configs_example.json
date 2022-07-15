@@ -1,0 +1,6 @@
+{
+  "domainAuth0": "<YOUR AUTH0 DOMAIN>",
+  "domainURLAuth0": "https://<YOUR AUTH0 DOMAIN>",
+  "clientId": "<YOUR AUTH0 CLIENT ID>",
+  "domainURL": "<YOUR LOCAL DOMAIN>"
+}
