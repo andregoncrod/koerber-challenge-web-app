@@ -125,81 +125,85 @@ export default {
 </script>
 
 <template>
-    <div id="challenge">
-        <div v-if="!this.$store.state.userIsAuthorized" id="not-logged-in">
+    <div
+        v-if="!this.$store.state.userIsAuthorized"
+        id="challenge"
+        class="container"
+    >
+        <div id="not-logged-in" class="row">
             <h5>Challenge page - authentication needed</h5>
         </div>
-        <div v-else id="challenge">
-            <div class="col-md-12">
-                <h5>Challenge page</h5>
-            </div>
-            <div class="col-md-12" style="margin-top: 30px">
-                <div class="col-md-6" style="float: left">
-                    <form @submit="checkForm">
-                        <div v-if="errors.length">
-                            <b>Please correct the following error(s):</b>
-                            <ul>
-                                <li v-for="error in errors" :key="error">
-                                    {{ error }}
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEmail1">Email address</label>
-                            <input
-                                for="email"
-                                class="form-control"
-                                id="inputEmail"
-                                placeholder="Please enter your email here"
-                                required
-                                v-model="email"
-                            />
-                        </div>
-                        <button
-                            id="submitForm"
-                            type="submit"
-                            class="btn btn-primary"
-                        >
-                            Submit
-                        </button>
-                    </form>
-                </div>
-                <div class="col-md-6" style="float: left">
-                    <h6>
-                        User Posts
-                        <span v-if="actualUserID != -1"
-                            > - ID: {{ actualUserID }}</span
-                        >
-                    </h6>
+    </div>
+    <div v-else id="challenge" class="container">
+        <div class="row">
+            <h5>Challenge page</h5>
+        </div>
+        <div class="row" style="margin-top: 20px">
+            <div class="col-md-6 col-sm-12 col-12">
+                <form @submit="checkForm">
+                    <div v-if="errors.length">
+                        <b>Please correct the following error(s):</b>
+                        <ul>
+                            <li v-for="error in errors" :key="error">
+                                {{ error }}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail1">Email address</label>
+                        <input
+                            for="email"
+                            class="form-control"
+                            id="inputEmail"
+                            placeholder="Please enter your email here"
+                            required
+                            v-model="email"
+                        />
+                    </div>
                     <button
-                        id="submitPost"
-                        type="button"
+                        id="submitForm"
+                        type="submit"
                         class="btn btn-primary"
-                        @click="createRandomPost"
                     >
-                        Create Random Post
+                        Submit
                     </button>
-                    <div v-if="actualUserID != -1">
-                        <table class="table table-striped table-responsive">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Body</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="post in posts" :key="post.id">
-                                    <th scope="row">{{ post.id }}</th>
-                                    <td>{{ post.title }}</td>
-                                    <td>{{ post.body }}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div v-else>
-                        <h6>No known user on API inserted</h6>
-                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 col-sm-12 col-12">
+                <h6>
+                    User Posts
+                    <span v-if="actualUserID != -1">
+                        &nbsp;- ID: {{ actualUserID }}
+                    </span>
+                </h6>
+                <button
+                    id="submitPost"
+                    type="button"
+                    class="btn btn-primary"
+                    @click="createRandomPost"
+                >
+                    Create Random Post
+                </button>
+                <div v-if="actualUserID != -1">
+                    <table class="table table-striped table-responsive">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Body</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="post in posts" :key="post.id">
+                                <th scope="row">{{ post.id }}</th>
+                                <td>{{ post.title }}</td>
+                                <td>{{ post.body }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div v-else>
+                    <h6>No known user on API inserted</h6>
                 </div>
             </div>
         </div>
@@ -214,17 +218,14 @@ export default {
 #challenge h5,
 #not-logged-in {
     text-align: center;
-    margin-top: 30px;
 }
 
 #submitForm {
     margin-top: 15px;
 }
 
-#inputEmail {
-    width: 60%;
-}
 table {
     font-size: 10px;
+    margin-top: 20px;
 }
 </style>
