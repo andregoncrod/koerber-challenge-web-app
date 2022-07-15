@@ -10,6 +10,18 @@
 npm install
 ```
 
+### Configuration
+
+The project needs to be configured with your Auth0 configurations in order for the authentication flow to work.
+
+To do this, first copy `auth_config.json.example` into a new file in the same folder called `auth_config.json`, and replace the values within with your own Auth0 application credentials:
+
+```json
+{
+  "domain": "<YOUR AUTH0 DOMAIN>",
+  "clientId": "<YOUR AUTH0 CLIENT ID>"
+}
+
 ### Compile and Hot-Reload for Development
 
 ```sh
